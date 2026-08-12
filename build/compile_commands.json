@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/main.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/main.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/main.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/main.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/Game.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Game.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Game.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/Game.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Grid.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Grid.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Cell.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Cell.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/Renderer.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Renderer.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Renderer.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/Renderer.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/BFS.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/BFS.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/BFS.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/BFS.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/DFS.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/DFS.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Dijkstra.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Dijkstra.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/A_star.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/A_star.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o"
+},
+{
+  "directory": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build",
+  "command": "/usr/bin/g++ -I/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include -g -std=gnu++17 -o CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/MazeGenerator.cpp",
+  "file": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/MazeGenerator.cpp",
+  "output": "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o"
+}
+]

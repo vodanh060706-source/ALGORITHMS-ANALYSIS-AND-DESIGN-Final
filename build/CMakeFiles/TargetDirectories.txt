@@ -1,0 +1,3 @@
+/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/PathFindingGame.dir
+/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/edit_cache.dir
+/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build/CMakeFiles/rebuild_cache.dir

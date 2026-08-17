@@ -14,5 +14,7 @@ class Cell {
         void draw(sf::RenderWindow &Window);
         void setState(CellState state);
         CellState getState() const;
+        int getRow() const;
+        int getCol() const;
         bool contains(float x, float y) const;
 };

@@ -14,7 +14,12 @@ Cell::Cell(int row, int col, float size)
 
     shape.setFillColor(sf::Color::White);
 }
-
+int Cell::getRow() const{
+    return row;
+ };
+int Cell::getCol() const{
+    return col;
+};
 void Cell::draw(sf::RenderWindow& window)
 {
     switch (state)

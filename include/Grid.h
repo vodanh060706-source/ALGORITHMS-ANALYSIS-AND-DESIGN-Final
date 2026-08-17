@@ -18,4 +18,7 @@ class Grid {
     Cell *getCellAt(float x, float y);
     void setStart(Cell *cell);
     void setGoal(Cell *cell);
+    int getRows() const;
+    int getCols() const;
+    std::vector<Cell*> getNeighbors(Cell* cell);
 };

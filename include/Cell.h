@@ -17,4 +17,5 @@ class Cell {
         int getRow() const;
         int getCol() const;
         bool contains(float x, float y) const;
+        void setOffset(float offsetX, float offsetY);
 };

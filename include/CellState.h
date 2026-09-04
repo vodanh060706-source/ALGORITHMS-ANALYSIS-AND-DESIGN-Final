@@ -5,5 +5,8 @@ enum class CellState {
     Start,
     Goal,
     Visited,
-    Path
+    PathBFS,
+    PathDFS, 
+    PathDijkstra,
+    PathAStar
 };

@@ -1,26 +1,36 @@
 #include "Grid.h"
- int Grid::getRows() const{
-    return rows;
- };
-int Grid::getCols() const{
-    return cols;
-};
 Grid::Grid(int rows, int cols, float cellSize)
-    : rows(rows),cols(cols), cellSize(cellSize) {
+    : rows(rows),cols(cols), offsetX(0.f), offsetY(0.f),
+     cellSize(cellSize) {
         for(int row = 0; row < rows; row++) {
             for(int col = 0; col < cols; col ++) {
                 cells.emplace_back(row, col, cellSize);
             }
         }
     }
+int Grid::getRows() const{
+    return rows;
+ };
+int Grid::getCols() const{
+    return cols;
+};
+Cell* Grid::getStart() const {
+    return startCell;
+};
+Cell* Grid::getGoal() const{
+    return goalCell;
+};
+
 void Grid::draw(sf::RenderWindow &window) {
     for(Cell &cell : cells) {
         cell.draw(window);
     }
 }
 Cell* Grid::getCellAt(float x, float y) {
-    for (Cell& cell : cells) {
-        if(cell.contains(x,y)){
+    for (Cell& cell : cells)
+    {
+        if (cell.contains(x, y))
+        {
             return &cell;
         }
     }
@@ -49,6 +59,30 @@ void Grid::setGoal(Cell *cell) {
         goalCell->setState(CellState::Goal);
     }
 }
+void Grid::resize(int newRows, int newCols, float newCellSize)
+{
+    rows = newRows;
+    cols = newCols;
+    cellSize = newCellSize;
+
+    offsetX = (960.f - cols * cellSize) / 2.f;
+    offsetY = (720.f - rows * cellSize) / 2.f;
+
+    cells.clear();
+    cells.reserve(rows * cols);
+
+    startCell = nullptr;
+    goalCell = nullptr;
+
+    for (int row = 0; row < rows; row++)
+    {
+        for (int col = 0; col < cols; col++)
+        {
+            cells.emplace_back(row, col, cellSize);
+            cells.back().setOffset(offsetX, offsetY);
+        }
+    }
+}
 std::vector<Cell*> Grid::getNeighbors(Cell* cell) {
     std::vector<Cell*> neighbors;
     if(cell == nullptr) {
@@ -62,8 +96,8 @@ std::vector<Cell*> Grid::getNeighbors(Cell* cell) {
     {
         {-1, 0}, // Up
         {1, 0}, // Down
-        { 0,1}, // Left
-        { 0, -1}  // Right
+        { 0,1}, // Right
+        { 0, -1}  // Left 
     };
     // Xác định hướng
     for(int i=0; i<4; i++) {

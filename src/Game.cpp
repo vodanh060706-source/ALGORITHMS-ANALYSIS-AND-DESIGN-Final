@@ -1,9 +1,19 @@
 #include "Game.h" 
 
 Game::Game()
-    : window(sf::VideoMode(1000, 800), "Path Finding Game"),
-    isRunning(true), grid(20,25,40.f) {}
-
+    : rows(18),
+      cols(24),
+      cellSize(std::min(
+          WINDOW_WIDTH / cols,
+          WINDOW_HEIGHT / rows
+      )),
+      grid(rows, cols, cellSize),
+      isRunning(true),
+      window(
+          sf::VideoMode(960, 720),
+          "Path Finding Game"
+      )
+{}
 Game::~Game()
 {
 }
@@ -26,45 +36,81 @@ void Game::processEvents()
         {
             window.close();
         }
-        // Nhấn phím S
-        if(event.type == sf::Event::KeyPressed)
+        // Nhấn phím chọn mục tiêu 
+        if (event.type == sf::Event::KeyPressed)
         {
-            if(event.key.code == sf::Keyboard::S){
+            if (event.key.code == sf::Keyboard::S)
+            {
                 selectingStart = true;
                 selectingGoal = false;
             }
-            if(event.key.code == sf::Keyboard::G){
+            else if (event.key.code == sf::Keyboard::G)
+            {
                 selectingStart = false;
                 selectingGoal = true;
             }
+            else if (event.key.code == sf::Keyboard::B)
+            {
+                bfs.solve(grid);
+            }
+            else if (event.key.code == sf::Keyboard::D)
+            {
+                dfs.solve(grid);
+            }
+            else if (event.key.code == sf::Keyboard::K)
+            {
+                dijkstra.solve(grid);
+            }
+            else if (event.key.code == sf::Keyboard::A)
+            {
+                aStar.solve(grid);
+            }
+            else if (event.key.code == sf::Keyboard::R)
+            {
+                rows = 25;
+                cols = 35;
+
+                cellSize = std::min(
+                    WINDOW_WIDTH / cols,
+                    WINDOW_HEIGHT / rows
+                );
+
+                grid.resize(rows, cols, cellSize);
+            }
+            else
+            {
+                selectingStart = false;
+                selectingGoal = false;
+            }
         }
-        // Click chuột
+
         if (event.type == sf::Event::MouseButtonPressed)
         {
             Cell* cell = grid.getCellAt(
-                event.mouseButton.x, 
+                event.mouseButton.x,
                 event.mouseButton.y
             );
+
             if (cell != nullptr)
             {
-                // Chuột phải → xóa Wall
                 if (event.mouseButton.button == sf::Mouse::Right)
                 {
                     cell->setState(CellState::Empty);
                 }
-                // Chuột trái → tạo Wall
+
                 if (event.mouseButton.button == sf::Mouse::Left)
                 {
-                    if(selectingStart) {
+                    if (selectingStart)
+                    {
                         grid.setStart(cell);
-                        selectingStart = false;
                     }
-                    else if(selectingGoal) {
+                    else if (selectingGoal)
+                    {
                         grid.setGoal(cell);
-                        selectingGoal = false;
                     }
-                    else {
-                        cell -> setState(CellState::Wall);
+                    else
+                    {
+                        cell->setState(CellState::Wall);
                     }
                 }
             }
@@ -102,14 +148,11 @@ void Game::update()
 void Game::render()
 {
     window.clear(sf::Color::Black);
-
-    // Sau này sẽ vẽ:
     grid.draw(window);
     // - Wall
     // - Start
     // - Goal
     // - Path
     // - UI
-
     window.display();
 }

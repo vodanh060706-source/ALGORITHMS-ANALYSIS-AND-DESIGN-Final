@@ -1,15 +1,14 @@
-#pragma once 
+#pragma once
 
 #include "Algorithm.h"
 #include "Grid.h"
-#include <queue> 
-#include <cmath>
+#include <stack> 
 #include <unordered_map> // Lưu cha mỗi ô 
 #include <unordered_set> // Lưu vị trị đã thăm 
 #include <vector>
-class A_star : public Algorithm
+class DFS : public Algorithm
 {
 public:
-    A_star();
+    DFS();
     bool solve(Grid& grid) override;
 };

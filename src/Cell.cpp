@@ -39,8 +39,17 @@ void Cell::draw(sf::RenderWindow& window)
     case CellState::Visited:
         shape.setFillColor(sf::Color::Blue);
         break;
-    case CellState::Path:
+    case CellState::PathBFS:
         shape.setFillColor(sf::Color::Yellow);
+        break;
+    case CellState::PathDFS:
+        shape.setFillColor(sf::Color::Cyan);
+        break;
+    case CellState::PathDijkstra:
+        shape.setFillColor(sf::Color::Magenta);
+        break;
+    case CellState::PathAStar:
+        shape.setFillColor(sf::Color(255,165,0));
         break;
     }
     window.draw(shape);
@@ -53,4 +62,10 @@ void Cell::setState(CellState state) {
 }
 bool Cell::contains(float x, float y) const {
     return shape.getGlobalBounds().contains(x,y);
+}
+void Cell::setOffset(float offsetX, float offsetY) {
+    shape.setPosition(
+        offsetX + col * size,
+        offsetY + row * size
+    );
 }

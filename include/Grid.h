@@ -8,6 +8,8 @@ class Grid {
     private: 
     int rows;
     int cols;
+    float offsetX;
+    float offsetY;
     float cellSize;
     std::vector<Cell> cells;
     Cell *startCell = nullptr;
@@ -20,5 +22,8 @@ class Grid {
     void setGoal(Cell *cell);
     int getRows() const;
     int getCols() const;
+    Cell* getStart() const;
+    Cell* getGoal() const;
+    void resize(int rows, int cols, float cellSize);
     std::vector<Cell*> getNeighbors(Cell* cell);
 };

@@ -36,6 +36,15 @@ Cell* Grid::getCellAt(float x, float y) {
     }
     return nullptr;
 }
+Cell* Grid::getCell(int row, int col) {
+    if (row < 0 || row >= getRows() ||
+        col < 0 || col >= getCols())
+    {
+        return nullptr;
+    }
+
+    return &cells[row * cols + col];
+};
 void Grid::setStart(Cell *cell) {
     // Xóa start cũ
     if (startCell != nullptr) {

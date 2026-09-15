@@ -31,6 +31,7 @@ private:
     DFS dfs;
     Dijkstra dijkstra;
     A_star aStar;
+    MazeGenerator mazeGenarator;
 
 public:
     Game();

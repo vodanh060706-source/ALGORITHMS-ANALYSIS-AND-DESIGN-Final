@@ -4,9 +4,15 @@ enum class CellState {
     Wall,
     Start,
     Goal,
-    Visited,
     PathBFS,
     PathDFS, 
+    Visited,
     PathDijkstra,
+    VisitedSecondary, 
+    Overlap,
+    VisitedBFS,
+    VisitedDFS,
+    VisitedDijkstra,
+    VisitedAStar,
     PathAStar
 };

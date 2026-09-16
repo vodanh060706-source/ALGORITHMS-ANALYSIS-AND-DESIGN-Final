@@ -1,69 +1,95 @@
 #include "A_star.h"
+
+#include <cmath>
 A_star::A_star() {}
-bool A_star::solve(Grid& grid) {
+int A_star::getSteps() const
+{
+    return steps;
+}
+namespace 
+{
+int heuristic(
+    Cell* current,
+    Cell* goal
+)
+{
+    return std::abs(current->getRow()- goal->getRow())
+         + std::abs(current->getCol() - goal->getCol());
+}
+}
+bool A_star::solve(Grid& grid)
+{
+    steps = 0;
     Cell* start = grid.getStart();
     Cell* goal = grid.getGoal();
-    // Không có start và goal 
-    if(start == nullptr || goal == nullptr) {
+    if (start == nullptr || goal == nullptr)
+    {
         return false;
     }
-    // gScore = Chi phí từ ô Start đến Goal 
     std::unordered_map<Cell*, int> gScore;
-    // parent: lưu giữ ô cha của mỗi Cell 
     std::unordered_map<Cell*, Cell*> parent;
-    // Các ô đã xử lí 
-    std::unordered_set<Cell*> process;
-    // Node lưu fScore, Cell 
+    std::unordered_set<Cell*> visited;
     using Node = std::pair<int, Cell*>;
-    std::priority_queue<Node, 
-                        std::vector<Node>, 
-                        std::greater<Node>> open;
-    // Chi phí ban đầu bằng 0 
+
+    std::priority_queue<
+        Node,
+        std::vector<Node>,
+        std::greater<Node>
+    > pq;
+    // g(start) = 0
     gScore[start] = 0;
-    //f[start] = g[start] + h[start] 
-    int hStart = std::abs(start->getRow() - goal->getRow()) 
-                + std::abs(start->getCol() - goal->getCol());
-    open.push({hStart, start});
-    while(!open.empty()) {
-        // Lấy node f nhỏ nhất 
-        Node node = open.top();
-        open.pop();
-        int currentF = node.first;
-        Cell* current = node.second;
-        // Nếu đã xử lí thì bỏ qua 
-        if(process.find(current) != process.end()) 
-        continue;
-        process.insert(current);
-        // Tới Goal 
-        if(current == goal) break;
-        // Lấy hàng xóm 
-        std::vector<Cell*> neighbors = grid.getNeighbors(current);
-        for(Cell* neighbor : neighbors) {
-            // nếu xử lí thì bỏ qua 
-            if(process.find(neighbor) != process.end()) continue;
-            // Mỗi bước đi có cost bằng 1
-            int tentativeG = gScore[current]+1;
-            // Nếu chưa có hoặc tìm đường đi tốt hơn
-            if(gScore.find(neighbor) == gScore.end() || tentativeG < gScore[neighbor]) {
-                // Cập nhật điểm 
-                gScore[neighbor] = tentativeG;
-                // Lưu cha 
+    int h = heuristic(start, goal);
+    int f = h;
+    pq.push(
+        std::make_pair(f, start)
+    );
+    while (!pq.empty())
+    {
+        std::pair<int, Cell*> node = pq.top();
+        pq.pop();
+        Cell* current =
+            node.second;
+        if (visited.find(current) !=
+            visited.end())
+        {
+            continue;
+        }
+        visited.insert(current);
+        steps++;                            
+        // A* = 8
+        current->markVisited(8);
+        if (current == goal)
+        {
+            break;
+        }
+        std::vector<Cell*> neighbors =
+            grid.getNeighbors(current);
+        for (Cell* neighbor : neighbors)
+        {
+            int newG = gScore[current] + 1;
+            if (gScore.find(neighbor) == gScore.end() ||
+                newG < gScore[neighbor])
+            {
+                gScore[neighbor] = newG;
                 parent[neighbor] = current;
-                  // Heuristic Manhattan
-                int h_neighbor = std::abs(neighbor->getRow() - goal->getRow()) 
-                               + std::abs(neighbor->getCol() - goal->getCol());
-                // f(neighbor) = g(neighbor) + h(neighbor)
-                int f_neighbor = tentativeG + h_neighbor;
-                open.push({f_neighbor, neighbor});
+                int h = heuristic(neighbor, goal);
+                int f = newG + h;
+                pq.push(std::make_pair(f,neighbor));
             }
-        } 
+        }
     }
-    // Không tìm thấy Goal 
-    if(gScore.find(goal)==gScore.end()) return false;
-    // Truy vết đường đi 
+    if (gScore.find(goal) == gScore.end())
+        {
+            return false;
+        }
+    // Truy vết
     Cell* current = goal;
-    while(current != start) {
-        current->setState(CellState::PathAStar);
+    while (current != start)
+    {
+        if (current != goal)
+        {
+            current->setState(CellState::PathAStar);
+        }
         current = parent[current];
     }
     return true;

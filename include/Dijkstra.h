@@ -8,7 +8,10 @@
 #include <vector>
 class Dijkstra : public Algorithm
 {
+private:
+    int steps = 0;
 public:
     Dijkstra();
     bool solve(Grid& grid) override;
+    int getSteps() const;
 };

@@ -9,7 +9,10 @@
 #include <vector>
 class A_star : public Algorithm
 {
+private:
+    int steps = 0;
 public:
     A_star();
     bool solve(Grid& grid) override;
+    int getSteps() const;
 };

@@ -8,7 +8,10 @@
 #include <vector>
 class DFS : public Algorithm
 {
+private:
+    int steps = 0;
 public:
     DFS();
     bool solve(Grid& grid) override;
+    int getSteps() const;
 };

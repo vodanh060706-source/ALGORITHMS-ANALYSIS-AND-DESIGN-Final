@@ -25,6 +25,8 @@ class Grid {
     int getCols() const;
     Cell* getStart() const;
     Cell* getGoal() const;
+    void setOffset(float x, float y);
     void resize(int rows, int cols, float cellSize);
+    void clearPath();
     std::vector<Cell*> getNeighbors(Cell* cell);
 };

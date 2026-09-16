@@ -21,8 +21,10 @@ Cell* Grid::getGoal() const{
     return goalCell;
 };
 
-void Grid::draw(sf::RenderWindow &window) {
-    for(Cell &cell : cells) {
+void Grid::draw(sf::RenderWindow& window)
+{
+    for (Cell& cell : cells)
+    {
         cell.draw(window);
     }
 }
@@ -35,6 +37,25 @@ Cell* Grid::getCellAt(float x, float y) {
         }
     }
     return nullptr;
+}
+Cell* Grid::getCell(int row, int col) {
+    if (row < 0 || row >= getRows() ||
+        col < 0 || col >= getCols())
+    {
+        return nullptr;
+    }
+
+    return &cells[row * cols + col];
+};
+void Grid::setOffset(float x, float y)
+{
+    offsetX = x;
+    offsetY = y;
+
+    for (Cell& cell : cells)
+    {
+        cell.setOffset(offsetX, offsetY);
+    }
 }
 void Grid::setStart(Cell *cell) {
     // Xóa start cũ
@@ -59,13 +80,38 @@ void Grid::setGoal(Cell *cell) {
         goalCell->setState(CellState::Goal);
     }
 }
+// void Grid::resize(int newRows, int newCols, float newCellSize)
+// {
+//     rows = newRows;
+//     cols = newCols;
+//     cellSize = newCellSize;
+
+//     offsetX = (960.f - cols * cellSize) / 2.f;
+//     offsetY = (720.f - rows * cellSize) / 2.f;
+
+//     cells.clear();
+//     cells.reserve(rows * cols);
+
+//     startCell = nullptr;
+//     goalCell = nullptr;
+
+//     for (int row = 0; row < rows; row++)
+//     {
+//         for (int col = 0; col < cols; col++)
+//         {
+//             cells.emplace_back(row, col, cellSize);
+//             cells.back().setOffset(offsetX, offsetY);
+//         }
+//     }
+// }
 void Grid::resize(int newRows, int newCols, float newCellSize)
 {
     rows = newRows;
     cols = newCols;
     cellSize = newCellSize;
 
-    offsetX = (960.f - cols * cellSize) / 2.f;
+    // Vùng lưới chỉ rộng 700.f và cao 720.f (trừ 260.f của UI panel)
+    offsetX = (700.f - cols * cellSize) / 2.f;
     offsetY = (720.f - rows * cellSize) / 2.f;
 
     cells.clear();
@@ -114,4 +160,18 @@ std::vector<Cell*> Grid::getNeighbors(Cell* cell) {
         }
     }
     return neighbors;
+}
+void Grid::clearPath()
+{
+    for (Cell& cell : cells)
+    {
+        // Chỉ reset những ô là đường đi hoặc ô đã duyệt (Visited/Path)
+        // Giữ nguyên Wall, Start và Goal
+        if (cell.getState() != CellState::Wall &&
+            cell.getState() != CellState::Start &&
+            cell.getState() != CellState::Goal)
+        {
+            cell.setState(CellState::Empty);
+        }
+    }
 }

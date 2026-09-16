@@ -1,12 +1,12 @@
 # ninja log v7
-3	620	1787073464719236800	CMakeFiles/PathFindingGame.dir/src/BFS.cpp.o	6d4bf971b0902f60
-3	340	1787073464719048100	CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o	a10b6776c7b4848b
-5	39	1786540697625681100	CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o	a537f3c86c4a883c
-3	426	1787073464718861600	CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o	79613d0575536080
-4	543	1787073464719469900	CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o	c6c9a0e40bf062dd
+5	711	1789567195958772200	CMakeFiles/PathFindingGame.dir/src/BFS.cpp.o	6d4bf971b0902f60
+5	483	1789567195958523400	CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o	a10b6776c7b4848b
+6	484	1789567195960242800	CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o	a537f3c86c4a883c
+4	457	1789567195958280100	CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o	79613d0575536080
+5	519	1789567195959019800	CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o	c6c9a0e40bf062dd
 4	42	1786540697624169400	CMakeFiles/PathFindingGame.dir/src/Renderer.cpp.o	1d80249e1cfac82
-4	578	1787073464719688800	CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o	cef24e62d92ae513
-4	664	1787073464719930100	CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o	61a8f28a5e3fbb0
-3	567	1787073464718396800	CMakeFiles/PathFindingGame.dir/src/main.cpp.o	9d3d98c675442543
-3	509	1787073464718663400	CMakeFiles/PathFindingGame.dir/src/Game.cpp.o	80ee1ec0ee67dc56
-664	742	1787073465379473900	PathFindingGame	59b01f5b94b110d7
+6	573	1789567195959303000	CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o	cef24e62d92ae513
+6	786	1789567195959682300	CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o	61a8f28a5e3fbb0
+4	437	1789567195957627400	CMakeFiles/PathFindingGame.dir/src/main.cpp.o	9d3d98c675442543
+4	746	1789567195957988300	CMakeFiles/PathFindingGame.dir/src/Game.cpp.o	80ee1ec0ee67dc56
+787	876	1789567196740315700	PathFindingGame	59b01f5b94b110d7

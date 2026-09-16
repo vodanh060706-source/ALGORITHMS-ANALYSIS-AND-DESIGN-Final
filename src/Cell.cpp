@@ -25,13 +25,23 @@ void Cell::draw(sf::RenderWindow& window)
 {
     switch (state)
     {
+        case CellState::Empty:
+            // Màu nền ô trống (màu tối hoặc xám nhẹ để nổi bật trên nền cửa sổ)
+            shape.setFillColor(sf::Color(50, 100, 50));
+            break;
+
+        case CellState::Wall:
+            // Màu của tường chắn khi vẽ chuột trái
+            shape.setFillColor(sf::Color(15, 15, 15));
+            break;
+
         case CellState::Start:
             shape.setFillColor(sf::Color(0, 220, 80));
             break;
 
         case CellState::Goal:
             shape.setFillColor(sf::Color(240, 50, 50));
-            break;topm
+            break;
 
         case CellState::VisitedBFS:
             shape.setFillColor(sf::Color(255, 220, 0));
@@ -54,7 +64,8 @@ void Cell::draw(sf::RenderWindow& window)
             break;
 
         case CellState::PathBFS:
-            shape.setFillColor(sf::Color(255, 255, 255));
+            // Đổi sang màu vàng sáng hoặc xanh để không bị trùng màu trắng
+            shape.setFillColor(sf::Color(255, 255, 100));
             break;
 
         case CellState::PathDFS:
@@ -70,7 +81,7 @@ void Cell::draw(sf::RenderWindow& window)
             break;
     }
     window.draw(shape);
-}
+} 
 CellState Cell::getState() const {
     return state;
 }

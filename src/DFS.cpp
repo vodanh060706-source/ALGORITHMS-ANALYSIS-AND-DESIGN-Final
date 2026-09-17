@@ -14,8 +14,7 @@ void DFS::reconstructPath()
 {
     pathLength = 0;
     Cell* current = goal;
-    if (current == nullptr || start == nullptr)
-        return;
+    if (current == nullptr || start == nullptr) return;
     while (current != nullptr && current != start)
     {
         pathLength++;
@@ -68,21 +67,11 @@ bool DFS::step()
 {
     if (finished)
         return false;
-
-    if (grid == nullptr ||
-        start == nullptr ||
-        goal == nullptr)
+    if (grid == nullptr || start == nullptr || goal == nullptr)
     {
         finished = true;
-
-        auto endTime =
-            std::chrono::high_resolution_clock::now();
-
-        executionTime =
-            std::chrono::duration<double, std::milli>(
-                endTime - animationStartTime
-            ).count();
-
+        auto endTime = std::chrono::high_resolution_clock::now();
+        executionTime = std::chrono::duration<double, std::milli>( endTime - animationStartTime).count();
         return false;
     }
 
@@ -101,10 +90,8 @@ bool DFS::step()
 
         return false;
     }
-
     Cell* current = stack.top();
     stack.pop();
-
     steps++;
 
     if (current == goal)

@@ -6,6 +6,7 @@
 #include "Grid.h"
 #include "BFS.h"
 #include "DFS.h"
+#include "GBFS.h"
 #include "Dijkstra.h"
 #include "A_star.h"
 #include "MazeGenerator.h"
@@ -39,6 +40,7 @@ private:
     float cellSize;
     BFS bfs;
     DFS dfs;
+    GBFS gbfs;
     Dijkstra dijkstra;
     A_star aStar;
     MazeGenerator mazeGenerator;
@@ -61,7 +63,8 @@ private:
         BFS,
         DFS,
         Dijkstra,
-        A_star
+        A_star, 
+        GBFS
     };
     AnimationAlgorithm animationAlgorithm = AnimationAlgorithm::None;
 public:

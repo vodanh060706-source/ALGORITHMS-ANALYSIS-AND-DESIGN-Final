@@ -5,6 +5,7 @@ enum class CellState {
     Start,
     Goal,
     PathBFS,
+    PathGBFS,
     PathDFS, 
     Visited,
     PathDijkstra,
@@ -12,6 +13,7 @@ enum class CellState {
     Overlap,
     VisitedBFS,
     VisitedDFS,
+    VisitedGBFS,
     VisitedDijkstra,
     VisitedAStar,
     PathAStar

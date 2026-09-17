@@ -18,6 +18,7 @@ add_executable(PathFindingGame
     src/DFS.cpp
     src/Dijkstra.cpp
     src/A_star.cpp
+    src/GBFS.cpp
     src/MazeGenerator.cpp
 )
 

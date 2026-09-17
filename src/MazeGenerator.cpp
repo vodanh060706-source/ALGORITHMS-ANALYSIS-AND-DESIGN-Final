@@ -11,10 +11,7 @@ void MazeGenerator::generate(Grid& grid)
 
     if (rows < 3 || cols < 3)
         return;
-
-    // =========================================
     // 1. Đầu tiên biến toàn bộ ô thành WALL
-    // =========================================
     for (int row = 0; row < rows; row++)
     {
         for (int col = 0; col < cols; col++)
@@ -27,10 +24,7 @@ void MazeGenerator::generate(Grid& grid)
             }
         }
     }
-
-    // =========================================
     // 2. Bắt đầu tạo đường đi từ (1,1)
-    // =========================================
     carve(grid, 1, 1);
 }
 
@@ -43,7 +37,6 @@ void MazeGenerator::carve(Grid& grid, int row, int col)
 
     // Ô hiện tại trở thành đường đi
     current->setState(CellState::Empty);
-
     std::vector<std::pair<int, int>> directions =
     {
         {-2, 0},   // Up
@@ -98,7 +91,6 @@ void MazeGenerator::carve(Grid& grid, int row, int col)
             {
                 wall->setState(CellState::Empty);
             }
-
             // Tiếp tục DFS
             carve(
                 grid,

@@ -83,6 +83,7 @@ Game::Game()
         "B    BFS\n"
         "D    DFS\n"
         "K    Dijkstra\n"
+        "F    GBFS\n"
         "A    A*\n\n"
         "R    Random Maze\n"
         "T    Random Maze Full\n"
@@ -116,30 +117,37 @@ void Game::run()
 }
 void Game::compareAlgorithms()
 {
+    // bfs
     grid.clearPath();
     bfs.solve(grid);
-
     int bfsSteps = bfs.getSteps();
     int bfsPath = bfs.getPathLength();
     double bfsTime = bfs.getExecutionTime();
-
+    // dfs
     grid.clearPath();
     dfs.solve(grid);
-
     int dfsSteps = dfs.getSteps();
     int dfsPath = dfs.getPathLength();
     double dfsTime = dfs.getExecutionTime();
-
+    // dijkstra
     grid.clearPath();
     dijkstra.solve(grid);
     int dijkstraSteps = dijkstra.getSteps();
     int dijkstraPath = dijkstra.getPathLength();
     double dijkstraTime = dijkstra.getExecutionTime();
+    // a_star
     grid.clearPath();
     aStar.solve(grid);
     int aStarSteps = aStar.getSteps();
     int aStarPath = aStar.getPathLength();
     double aStarTime = aStar.getExecutionTime();
+    // gbfs
+    grid.clearPath();
+    gbfs.solve(grid);
+    int gbfsSteps = gbfs.getSteps();
+    int gbfsPath = gbfs.getPathLength();
+    double gbfsTime = gbfs.getExecutionTime();
+
     std::ostringstream result;
     result << "COMPARISON\n\n"
         << "BFS:          " << bfsSteps
@@ -161,7 +169,12 @@ void Game::compareAlgorithms()
         << "A*:           " << aStarSteps
         << "steps      |   " << aStarPath
         << "path       |   "
-        << aStarTime << " ms";
+        << aStarTime << " ms\n"
+
+        << "GBFS:          " << gbfsSteps
+        << "steps     |    " << gbfsPath
+        << "path      |    "
+        << gbfsTime << "ms\n";
     compareText.setString(result.str());
 }
 // UPDATE
@@ -175,8 +188,7 @@ void Game::update()
             animationClock.restart();
             bool running = true;
             // BFS
-            if (animationAlgorithm ==
-                AnimationAlgorithm::BFS)
+            if (animationAlgorithm == AnimationAlgorithm::BFS)
             {
                 running = bfs.step();
                 stepsText.setString( "Steps: " + std::to_string(bfs.getSteps()));
@@ -232,6 +244,21 @@ void Game::update()
                     timeStream << std::fixed << std::setprecision(3)
                      << aStar.getExecutionTime();
                     timeText.setString( "Time: " + timeStream.str() +" ms");
+                }
+            }
+            // GBFS
+            if (animationAlgorithm == AnimationAlgorithm::GBFS)
+            {
+                running = gbfs.step();
+                stepsText.setString( "Steps: " + std::to_string(gbfs.getSteps()));
+                pathText.setString( "Path: " + std::to_string(gbfs.getPathLength()));
+                if (!running)
+                {
+                    isAnimating = false;
+                    std::ostringstream timeStream;
+                    timeStream << std::fixed << std::setprecision(3)
+                               << gbfs.getExecutionTime();
+                    timeText.setString( "Time: " + timeStream.str() + " ms");
                 }
             }
         }
@@ -381,6 +408,22 @@ void Game::processEvents()
                 isAnimating = true;
                 animationClock.restart();
                 algorithmText.setString("Algorithm: A*");
+                stepsText.setString("Steps: 0");
+                pathText.setString("Path: 0");
+                timeText.setString("Time: 0.000 ms");
+            }
+            // GBFS
+            else if (event.key.code == sf::Keyboard::F)
+            {
+                if (isAnimating) continue;
+                selectingStart = false;
+                selectingGoal = false;
+                grid.clearPath();
+                gbfs.startAlgorithm(grid);
+                animationAlgorithm = AnimationAlgorithm::GBFS;
+                isAnimating = true;
+                animationClock.restart();
+                algorithmText.setString("Algorithm: GBFS");
                 stepsText.setString("Steps: 0");
                 pathText.setString("Path: 0");
                 timeText.setString("Time: 0.000 ms");

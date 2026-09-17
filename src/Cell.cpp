@@ -64,7 +64,6 @@ void Cell::draw(sf::RenderWindow& window)
             break;
 
         case CellState::PathBFS:
-            // Đổi sang màu vàng sáng hoặc xanh để không bị trùng màu trắng
             shape.setFillColor(sf::Color(255, 255, 100));
             break;
 
@@ -79,6 +78,14 @@ void Cell::draw(sf::RenderWindow& window)
         case CellState::PathAStar:
             shape.setFillColor(sf::Color(255, 100, 50));
             break;
+        
+        case CellState::VisitedGBFS:
+            shape.setFillColor(sf::Color(0, 200, 170));
+            break;
+
+        case CellState::PathGBFS:
+            shape.setFillColor(sf::Color(0, 255, 190));
+            break;    
     }
     window.draw(shape);
 } 
@@ -128,6 +135,11 @@ void Cell::markVisited(int algorithmBit)
     }
     // Chỉ A*
     else if (visitedMask == 8)
+    {
+        state = CellState::VisitedAStar;
+    }
+    // Chỉ GBFS 
+    else if (visitedMask == 16)
     {
         state = CellState::VisitedAStar;
     }

@@ -80,30 +80,6 @@ void Grid::setGoal(Cell *cell) {
         goalCell->setState(CellState::Goal);
     }
 }
-// void Grid::resize(int newRows, int newCols, float newCellSize)
-// {
-//     rows = newRows;
-//     cols = newCols;
-//     cellSize = newCellSize;
-
-//     offsetX = (960.f - cols * cellSize) / 2.f;
-//     offsetY = (720.f - rows * cellSize) / 2.f;
-
-//     cells.clear();
-//     cells.reserve(rows * cols);
-
-//     startCell = nullptr;
-//     goalCell = nullptr;
-
-//     for (int row = 0; row < rows; row++)
-//     {
-//         for (int col = 0; col < cols; col++)
-//         {
-//             cells.emplace_back(row, col, cellSize);
-//             cells.back().setOffset(offsetX, offsetY);
-//         }
-//     }
-// }
 void Grid::resize(int newRows, int newCols, float newCellSize)
 {
     rows = newRows;

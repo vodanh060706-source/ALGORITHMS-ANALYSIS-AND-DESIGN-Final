@@ -198,10 +198,24 @@ CMakeFiles/PathFindingGame.dir/src/A_star.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathFindingGame.dir/src/A_star.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/A_star.cpp -o CMakeFiles/PathFindingGame.dir/src/A_star.cpp.s
 
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o: CMakeFiles/PathFindingGame.dir/flags.make
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o: /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o: CMakeFiles/PathFindingGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o -MF CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o.d -o CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp
+
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp > CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.i
+
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp -o CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.s
+
 CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o: CMakeFiles/PathFindingGame.dir/flags.make
 CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o: /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/MazeGenerator.cpp
 CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o: CMakeFiles/PathFindingGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o -MF CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o.d -o CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o -c /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/MazeGenerator.cpp
 
 CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.i: cmake_force
@@ -223,6 +237,7 @@ PathFindingGame_OBJECTS = \
 "CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o" \
 "CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o" \
 "CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o" \
+"CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o" \
 "CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o"
 
 # External object files for target PathFindingGame
@@ -237,6 +252,7 @@ PathFindingGame: CMakeFiles/PathFindingGame.dir/src/BFS.cpp.o
 PathFindingGame: CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o
 PathFindingGame: CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o
 PathFindingGame: CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o
+PathFindingGame: CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o
 PathFindingGame: CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o
 PathFindingGame: CMakeFiles/PathFindingGame.dir/build.make
 PathFindingGame: CMakeFiles/PathFindingGame.dir/compiler_depend.ts
@@ -244,7 +260,7 @@ PathFindingGame: /usr/lib64/libsfml-graphics.so.2.6.2
 PathFindingGame: /usr/lib64/libsfml-window.so.2.6.2
 PathFindingGame: /usr/lib64/libsfml-system.so.2.6.2
 PathFindingGame: CMakeFiles/PathFindingGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PathFindingGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable PathFindingGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PathFindingGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -244,6 +244,7 @@ CMakeFiles/PathFindingGame.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/parse_numbers.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/DFS.h \
  /usr/include/c++/16/stack /usr/include/c++/16/bits/stl_stack.h \
+ /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/GBFS.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Dijkstra.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/A_star.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/MazeGenerator.h

@@ -85,12 +85,12 @@ clean: CMakeFiles/PathFindingGame.dir/clean
 CMakeFiles/PathFindingGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target PathFindingGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target PathFindingGame"
 .PHONY : CMakeFiles/PathFindingGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PathFindingGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PathFindingGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles 0
 .PHONY : CMakeFiles/PathFindingGame.dir/rule
@@ -102,7 +102,7 @@ PathFindingGame: CMakeFiles/PathFindingGame.dir/rule
 # codegen rule for target.
 CMakeFiles/PathFindingGame.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target PathFindingGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/build-linux/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Finished codegen for target PathFindingGame"
 .PHONY : CMakeFiles/PathFindingGame.dir/codegen
 
 # clean rule for target.

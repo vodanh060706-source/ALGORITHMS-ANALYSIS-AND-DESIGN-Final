@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Cell.cpp" "CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/Cell.cpp.o.d"
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/DFS.cpp" "CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o.d"
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Dijkstra.cpp" "CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o.d"
+  "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp" "CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o.d"
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Game.cpp" "CMakeFiles/PathFindingGame.dir/src/Game.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/Game.cpp.o.d"
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Grid.cpp" "CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o.d"
   "/run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/MazeGenerator.cpp" "CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o" "gcc" "CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o.d"

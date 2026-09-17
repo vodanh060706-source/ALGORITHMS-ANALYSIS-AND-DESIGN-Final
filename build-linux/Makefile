@@ -249,6 +249,30 @@ src/Dijkstra.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.s
 .PHONY : src/Dijkstra.cpp.s
 
+src/GBFS.o: src/GBFS.cpp.o
+.PHONY : src/GBFS.o
+
+# target to build an object file
+src/GBFS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o
+.PHONY : src/GBFS.cpp.o
+
+src/GBFS.i: src/GBFS.cpp.i
+.PHONY : src/GBFS.i
+
+# target to preprocess a source file
+src/GBFS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.i
+.PHONY : src/GBFS.cpp.i
+
+src/GBFS.s: src/GBFS.cpp.s
+.PHONY : src/GBFS.s
+
+# target to generate assembly for a file
+src/GBFS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PathFindingGame.dir/build.make CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.s
+.PHONY : src/GBFS.cpp.s
+
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -393,6 +417,9 @@ help:
 	@echo "... src/Dijkstra.o"
 	@echo "... src/Dijkstra.i"
 	@echo "... src/Dijkstra.s"
+	@echo "... src/GBFS.o"
+	@echo "... src/GBFS.i"
+	@echo "... src/GBFS.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o.d"
   "CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o"
   "CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o.d"
+  "CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o"
+  "CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o.d"
   "CMakeFiles/PathFindingGame.dir/src/Game.cpp.o"
   "CMakeFiles/PathFindingGame.dir/src/Game.cpp.o.d"
   "CMakeFiles/PathFindingGame.dir/src/Grid.cpp.o"

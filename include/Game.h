@@ -17,7 +17,6 @@ private:
     void processEvents();
     void update();
     void render();
-
     Grid grid;
     bool isRunning;
     bool isAnimating = false;
@@ -26,6 +25,13 @@ private:
     sf::RenderWindow window;
     bool selectingStart = false;
     bool selectingGoal = false;
+    bool compareMode = false;
+    bool compareBFS = false;
+    bool compareDFS = false;
+    bool compareDijkstra = false;
+    bool compareAStar = false;
+    bool compareGBFS = false;
+    bool showComparison = false;
     // Kích thước cửa sổ
     static constexpr float WINDOW_WIDTH = 960.f;
     static constexpr float WINDOW_HEIGHT = 820.f;
@@ -54,6 +60,29 @@ private:
     sf::Text timeText;
     sf::Text controlsText;
     sf::Text compareText;
+    sf::RectangleShape bfsButton;
+    sf::RectangleShape dfsButton;
+    sf::RectangleShape dijkstraButton;
+    sf::RectangleShape aStarButton;
+    sf::RectangleShape gbfsButton;
+
+    sf::RectangleShape startButton;
+    sf::RectangleShape goalButton;
+    sf::RectangleShape randomButton;
+    sf::RectangleShape compareButton;
+    sf::RectangleShape clearButton;
+
+    sf::Text bfsButtonText;
+    sf::Text dfsButtonText;
+    sf::Text dijkstraButtonText;
+    sf::Text aStarButtonText;
+    sf::Text gbfsButtonText;
+
+    sf::Text startButtonText;
+    sf::Text goalButtonText;
+    sf::Text randomButtonText;
+    sf::Text compareButtonText;
+    sf::Text clearButtonText;
     // Panel
     sf::RectangleShape sidePanel;
     sf::RectangleShape infoPanel;
@@ -72,5 +101,13 @@ public:
     ~Game();
     void centerGrid();
     void run();
+    void setupButton(
+    sf::RectangleShape& button,
+    sf::Text& text,
+    const std::string& label,
+    float x,
+    float y,
+    float width,
+    float height);
     void compareAlgorithms();
 };

@@ -1,7 +1,9 @@
-CMakeFiles/PathFindingGame.dir/src/Game.cpp.o: \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/Game.cpp \
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o: \
+ /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/src/GBFS.cpp \
  /usr/include/stdc-predef.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Game.h \
+ /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/GBFS.h \
+ /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Algorithm.h \
+ /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Grid.h \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
@@ -225,11 +227,8 @@ CMakeFiles/PathFindingGame.dir/src/Game.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Grid.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Cell.h \
  /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/CellState.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/BFS.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Algorithm.h \
  /usr/include/c++/16/queue /usr/include/c++/16/deque \
  /usr/include/c++/16/bits/stl_deque.h /usr/include/c++/16/bits/deque.tcc \
  /usr/include/c++/16/bits/stl_queue.h /usr/include/c++/16/unordered_map \
@@ -241,38 +240,4 @@ CMakeFiles/PathFindingGame.dir/src/Game.cpp.o: \
  /usr/include/c++/16/bits/unordered_set.h /usr/include/c++/16/chrono \
  /usr/include/c++/16/bits/chrono.h /usr/include/c++/16/ratio \
  /usr/include/c++/16/cstdint /usr/include/c++/16/limits \
- /usr/include/c++/16/bits/parse_numbers.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/DFS.h \
- /usr/include/c++/16/stack /usr/include/c++/16/bits/stl_stack.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/GBFS.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/Dijkstra.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/A_star.h \
- /run/media/a356/DATA/DEV/C++/ALGORITHMS-ANALYSIS-AND-DESIGN-Final/include/MazeGenerator.h \
- /usr/include/c++/16/iomanip /usr/include/c++/16/bits/quoted_string.h \
- /usr/include/c++/16/sstream /usr/include/c++/16/istream \
- /usr/include/c++/16/bits/istream.tcc \
- /usr/include/c++/16/bits/sstream.tcc /usr/include/c++/16/iostream \
- /usr/include/c++/16/random /usr/include/c++/16/cmath /usr/include/math.h \
- /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
- /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/16/bits/specfun.h \
- /usr/include/c++/16/tr1/gamma.tcc \
- /usr/include/c++/16/tr1/special_function_util.h \
- /usr/include/c++/16/tr1/bessel_function.tcc \
- /usr/include/c++/16/tr1/beta_function.tcc \
- /usr/include/c++/16/tr1/ell_integral.tcc \
- /usr/include/c++/16/tr1/exp_integral.tcc \
- /usr/include/c++/16/tr1/hypergeometric.tcc \
- /usr/include/c++/16/tr1/legendre_function.tcc \
- /usr/include/c++/16/tr1/modified_bessel_func.tcc \
- /usr/include/c++/16/tr1/poly_hermite.tcc \
- /usr/include/c++/16/tr1/poly_laguerre.tcc \
- /usr/include/c++/16/tr1/riemann_zeta.tcc \
- /usr/include/c++/16/bits/random.h \
- /usr/include/c++/16/x86_64-redhat-linux/bits/opt_random.h \
- /usr/include/c++/16/bits/random.tcc /usr/include/c++/16/numeric \
- /usr/include/c++/16/bits/stl_numeric.h \
- /usr/include/c++/16/pstl/glue_numeric_defs.h
+ /usr/include/c++/16/bits/parse_numbers.h

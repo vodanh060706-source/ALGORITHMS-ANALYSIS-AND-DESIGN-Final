@@ -11,6 +11,7 @@ PathFindingGame: \
   CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o \
   CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o \
   CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o \
+  CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o \
   CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o \
   /usr/lib64/libsfml-graphics.so.2.6.2 \
   /usr/lib64/libsfml-window.so.2.6.2 \
@@ -92,6 +93,8 @@ CMakeFiles/PathFindingGame.dir/src/DFS.cpp.o:
 CMakeFiles/PathFindingGame.dir/src/Dijkstra.cpp.o:
 
 CMakeFiles/PathFindingGame.dir/src/A_star.cpp.o:
+
+CMakeFiles/PathFindingGame.dir/src/GBFS.cpp.o:
 
 CMakeFiles/PathFindingGame.dir/src/MazeGenerator.cpp.o:
 
